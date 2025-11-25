@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Assistant for Notification Bar</title>
+    <!-- MDUI CSS -->
+    <link rel="stylesheet" href="../css/mdui.min.css">
+    <link rel="stylesheet" href="../css/custom.css">
+    <style>
+        .mdui-container {
+            max-width: 960px;
+            margin-top: 32px;
+            margin-bottom: 32px;
+        }
+        .section-title {
+            margin-top: 32px;
+            margin-bottom: 16px;
+            font-weight: 500;
+        }
+        .content-card {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body class="mdui-theme-primary-indigo mdui-theme-accent-pink">
+
+    <div class="mdui-appbar mdui-shadow-0">
+        <div class="mdui-toolbar mdui-color-theme">
+            <a href="javascript:;" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">menu</i></a>
+            <a href="javascript:;" class="mdui-typo-headline">AI Assistant for Notification Bar</a>
+            <div class="mdui-toolbar-spacer"></div>
+            <a href="../index.html" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">home</i></a>
+        </div>
+    </div>
+
+    <div class="mdui-container">
+        <div class="mdui-card mdui-m-t-2 content-card">
+            <div class="mdui-card-media">
+                <img src="../images/Notification_Sender/Header.png" alt="Notification Sender Header" class="mdui-img-fluid">
+            </div>
+        </div>
+        <div class="mdui-card content-card">
+            <div class="mdui-card-primary">
+                <div class="mdui-card-primary-title mdui-typo-display-1">AI Assistant for Notification Bar</div>
+            </div>
+            <div class="mdui-card-content mdui-typo-title">
+                <p><strong>Origin:</strong> Discussed with roommates about how to more conveniently utilize AI without launching other applications. There seems to be no such application available online.</p>
+                <p><strong>Features:</strong> Sends persistent notifications with an input field. If the "AI Mode" switch is on, it responds using Google Gemini; otherwise, it clears the input field. An error will be prompted if the API is not configured.</p>
+            </div>
+        </div>
+
+        <div class="mdui-card mdui-m-t-2 content-card">
+            <div class="mdui-card-primary">
+                <div class="mdui-card-primary-title section-title">Highlights</div>
+            </div>
+            <div class="mdui-card-content">
+                <ul class="mdui-list">
+                    <li>Can invoke third-party input methods, suitable for restricted scenarios.</li>
+                    <li>Since the notification bar runs within the System UI process, it has the highest privilege; thus, content cannot be obtained unless an application requests notification reading permission.</li>
+                    <li>If the output is too long, it will be split into multiple notifications.</li>
+                    <li>In higher versions of Android, notifications can be forcefully dismissed. To prevent accidental dismissal, a listener is set up to resend the notification if it is cleared.</li>
+                    <li>Whitelist function to prevent the app from being used by others if leaked.</li>
+                    <li>Supports Gemini 2.0 Flash to Gemini 2.5 Pro, with customizable prompts.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="mdui-card mdui-m-t-2">
+            <div class="mdui-card-primary">
+                <div class="mdui-card-primary-title section-title">Screenshots</div>
+            </div>
+            <div class="mdui-card-content mdui-row-xs-1 mdui-row-sm-2 mdui-row-md-3" id="gallery">
+                <div class="mdui-col mdui-m-b-2">
+                    <div class="mdui-card">
+                        <div class="mdui-card-media">
+                            <a href="../images/Notification_Sender/Screenshot_Ask.png" data-src="../images/Notification_Sender/Screenshot_Ask.png">
+                                <img src="../images/Notification_Sender/Screenshot_Ask.png" class="mdui-img-fluid">
+                            </a>
+                        </div>
+                        <div class="mdui-card-primary-subtitle mdui-text-center">Screenshot_Ask.png</div>
+                    </div>
+                </div>
+                <div class="mdui-col mdui-m-b-2">
+                    <div class="mdui-card">
+                        <div class="mdui-card-media">
+                            <a href="../images/Notification_Sender/Screenshot_Main.png" data-src="../images/Notification_Sender/Screenshot_Main.png">
+                                <img src="../images/Notification_Sender/Screenshot_Main.png" class="mdui-img-fluid">
+                            </a>
+                        </div>
+                        <div class="mdui-card-primary-subtitle mdui-text-center">Screenshot_Main.png</div>
+                    </div>
+                </div>
+                <div class="mdui-col mdui-m-b-2">
+                    <div class="mdui-card">
+                        <div class="mdui-card-media">
+                            <a href="../images/Notification_Sender/Screenshot_Reply.png" data-src="../images/Notification_Sender/Screenshot_Reply.png">
+                                <img src="../images/Notification_Sender/Screenshot_Reply.png" class="mdui-img-fluid">
+                            </a>
+                        </div>
+                        <div class="mdui-card-primary-subtitle mdui-text-center">Screenshot_Reply.png</div>
+                    </div>
+                </div>
+                <div class="mdui-col mdui-m-b-2">
+                    <div class="mdui-card">
+                        <div class="mdui-card-media">
+                            <a href="../images/Notification_Sender/Screenshot_Settings.png" data-src="../images/Notification_Sender/Screenshot_Settings.png">
+                                <img src="../images/Notification_Sender/Screenshot_Settings.png" class="mdui-img-fluid">
+                            </a>
+                        </div>
+                        <div class="mdui-card-primary-subtitle mdui-text-center">Screenshot_Settings.png</div>
+                    </div>
+                </div>
+                <div class="mdui-col mdui-m-b-2">
+                    <div class="mdui-card">
+                        <div class="mdui-card-media">
+                            <a href="../images/Notification_Sender/Screenshot_Unauthorized.jpg" data-src="../images/Notification_Sender/Screenshot_Unauthorized.jpg">
+                                <img src="../images/Notification_Sender/Screenshot_Unauthorized.jpg" class="mdui-img-fluid">
+                            </a>
+                        </div>
+                        <div class="mdui-card-primary-subtitle mdui-text-center">Screenshot_Unauthorized.jpg</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="mdui-card mdui-m-t-2 content-card">
+            <div class="mdui-card-primary">
+                <div class="mdui-card-primary-title section-title">TODOs</div>
+            </div>
+            <div class="mdui-card-content">
+                <ul class="mdui-list">
+                    <li class="mdui-list-item">Add support for other service providers.</li>
+                    <li class="mdui-list-item">Tested on MIUI/HyperOS, the input field cannot be displayed in notifications due to "MIUI Optimization." A system detection feature needs to be added to make corresponding adjustments.</li>
+                    <li class="mdui-list-item">Improve UI.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- MDUI JS -->
+    <script src="../js/mdui.min.js"></script>
+    <script>
+        // MDUI 初始化
+        mdui.mutation();
+        // 初始化圖片畫廊
+        mdui.gallery('#gallery');
+    </script>
+</body>
+</html>
